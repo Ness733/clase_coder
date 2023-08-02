@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Cursos</title>
+  </head>
+
+  <body>
+    <h1>Lista Cursos</h1>
+    <ul>
+      {% for c in curso %}
+      <li>{{c.nombre}} - Comisión: {{c.numero_comision}}</li>
+      {% endfor %}
+    </ul>
+    <a href="{% url 'app1:curso_create' %}">Volver a Crear Curso</a>
+  </body>
+</html>

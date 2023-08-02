@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crear un Nuevo Curso</title>
+  </head>
+  <body>
+    <h1>Crear un Nuevo Curso</h1>
+    <form method="post">
+      {% csrf_token %}
+      <label for="nombre">Nombre del Curso:</label>
+      <input type="text" name="nombre" required /><br />
+      <label for="numero_comision">Número de Comisión:</label>
+      <input type="text" name="numero_comision" required />
+      <button type="submit">Guardar</button>
+    </form>
+    <a href="{% url 'app1:curso_list' %}">Volver a la lista de cursos</a>
+  </body>
+</html>

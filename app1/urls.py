@@ -21,8 +21,10 @@ from . import views
 
 urlpatterns = [
 
-    path('probandoTemplate/', views.probando_template, name="probandoTemplate"),
-    path('template_model/', views.template_model, name="Template_Model"),
+    path("probandoTemplate/", views.probando_template, name="probandoTemplate"),
+    path("curso_list/", views.curso_list, name="curso_list",),
+    path("curso_create/", views.curso_create, name="curso_create",),
+    path("index/", views.index, name="index",),
 
 
 ]
